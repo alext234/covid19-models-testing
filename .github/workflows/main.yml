@@ -19,9 +19,15 @@ jobs:
             pip install -r requirements.txt
 
             
-      - name: Download model
+      - name: Download COVID-Net model (small)
         run: |
            gdown https://drive.google.com/uc?id=1xrxK9swFVlFI-WAYcccIgm0tt9RgawXD
-        
+
+      - name: Extract COVID-Net model (small)
+        run: |
+           unzip "COVID-Net Small.zip"
+
+
+
 
             
