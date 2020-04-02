@@ -9,7 +9,7 @@ jobs:
   execute_notebooks:
     runs-on: ubuntu-latest
     container: 
-        image: alext234/datascience:latest
+        image: alext234/tensorflow:latest-py3
 
     steps:
       - uses: actions/checkout@v1
@@ -27,7 +27,9 @@ jobs:
         run: |
            unzip "COVID-Net Small.zip"
 
-
-
+      - name: Run inference
+        run: |
+           python inference.py -h
+            
 
             
