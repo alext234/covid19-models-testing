@@ -27,9 +27,9 @@ jobs:
         run: |
            unzip "COVID-Net Small.zip"
 
-      - name: Run inference
+      - name: Run inference with COVID-Net model on small samples
         run: |
-           python inference.py -h
+           ./run-inference.sh ./samples/
             
 
             
